@@ -1,0 +1,666 @@
+{
+    "schemes": [
+        {
+            "name": "Amma Two Wheeler Scheme",
+            "state": "Tamil Nadu",
+            "category": [
+                "women"
+            ],
+            "benefits": "50% subsidy (up to \u20b925,000) on two-wheeler purchase for working women.",
+            "eligibility": "Women employees earning up to \u20b91.5 lakh/year. Must have a valid driving licence.",
+            "application_link": "https://www.tn.gov.in/scheme/data_view/2116"
+        },
+        {
+            "name": "Kalaignar Magalir Urimai Thogai",
+            "state": "Tamil Nadu",
+            "category": [
+                "women"
+            ],
+            "benefits": "Monthly financial assistance of \u20b91,000 to eligible women heads of household.",
+            "eligibility": "Women who are the head of family, aged 21+, resident of Tamil Nadu, with annual income below \u20b92.5 lakh.",
+            "application_link": "https://www.tn.gov.in/scheme/data_view/24605"
+        },
+        {
+            "name": "Chief Minister's Free Laptop Scheme",
+            "state": "Tamil Nadu",
+            "category": [
+                "students"
+            ],
+            "benefits": "Free laptop for students passing Class 11 and joining Class 12 in government schools.",
+            "eligibility": "Students studying in government and government-aided schools in Tamil Nadu.",
+            "application_link": "https://www.tn.gov.in/scheme/data_view/2127"
+        },
+        {
+            "name": "Uzhavar Sandhai",
+            "state": "Tamil Nadu",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Direct-to-consumer farmers' markets allowing farmers to sell produce at better prices, cutting out middlemen.",
+            "eligibility": "All farmers in Tamil Nadu. No specific income criteria.",
+            "application_link": "https://www.tn.gov.in/scheme/data_view/2153"
+        },
+        {
+            "name": "Krishak Bandhu",
+            "state": "West Bengal",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Annual financial assistance of \u20b910,000 per acre (up to 2 acres) and life insurance of \u20b92 lakh.",
+            "eligibility": "Farmers owning at least 1 katha of agricultural land in West Bengal.",
+            "application_link": "https://krishakbandhu.net/"
+        },
+        {
+            "name": "Kanyashree Prakalpa",
+            "state": "West Bengal",
+            "category": [
+                "women",
+                "students"
+            ],
+            "benefits": "Annual scholarship of \u20b91,000 for girls aged 13-18 and one-time grant of \u20b925,000 at age 18 if unmarried and studying.",
+            "eligibility": "Girls aged 13-18 enrolled in school; annual family income below \u20b91.2 lakh.",
+            "application_link": "https://wbkanyashree.gov.in/"
+        },
+        {
+            "name": "Rupashree Prakalpa",
+            "state": "West Bengal",
+            "category": [
+                "women"
+            ],
+            "benefits": "One-time financial grant of \u20b925,000 to economically vulnerable families for their daughter's marriage.",
+            "eligibility": "Girls of legal marriage age (18+); annual family income below \u20b91.5 lakh.",
+            "application_link": "https://egiye-bangla.wb.gov.in/site/rupashree"
+        },
+        {
+            "name": "Anna Bhagya Scheme",
+            "state": "Karnataka",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "10 kg free rice per month per member of BPL family (up to 5 members).",
+            "eligibility": "BPL families holding valid ration cards in Karnataka.",
+            "application_link": "https://ahara.kar.nic.in/"
+        },
+        {
+            "name": "Gruha Jyothi",
+            "state": "Karnataka",
+            "category": [
+                "women"
+            ],
+            "benefits": "200 units of free electricity per month for domestic consumers.",
+            "eligibility": "All domestic electricity consumers of BESCOM, MESCOM, GESCOM, HESCOM, and CESC in Karnataka.",
+            "application_link": "https://gruhajyothi.karnataka.gov.in/"
+        },
+        {
+            "name": "Yuva Nidhi Scheme",
+            "state": "Karnataka",
+            "category": [
+                "students"
+            ],
+            "benefits": "Monthly unemployment allowance: \u20b93,000 for graduates and \u20b91,500 for diploma holders.",
+            "eligibility": "Unemployed graduates/diploma holders aged 18-25; Karnataka domicile; graduated after June 2023.",
+            "application_link": "https://sevasindhu.karnataka.gov.in/"
+        },
+        {
+            "name": "Raitha Siri",
+            "state": "Karnataka",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Annual income support of \u20b92,000 per acre (up to 5 acres) for farmers.",
+            "eligibility": "Farmers registered in the State's Land Records system. Must own land in Karnataka.",
+            "application_link": "https://www.karnataka.gov.in/agriculture"
+        },
+        {
+            "name": "e-Shram Card",
+            "state": "National",
+            "category": [
+                "farmers",
+                "women"
+            ],
+            "benefits": "Accidental insurance cover of \u20b92 lakh, access to 400+ welfare schemes, portability of benefits.",
+            "eligibility": "Unorganized sector workers aged 16-59; not an EPFO/ESIC member.",
+            "application_link": "https://eshram.gov.in/"
+        },
+        {
+            "name": "PM Kisan Samman Nidhi",
+            "state": "National",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "\u20b96,000 per year (\u20b92,000 every 4 months) direct cash transfer to farmers.",
+            "eligibility": "All landholding farmer families across India (some exclusions apply for income tax payers).",
+            "application_link": "https://pmkisan.gov.in/"
+        },
+        {
+            "name": "Beti Bachao Beti Padhao",
+            "state": "National",
+            "category": [
+                "women",
+                "students"
+            ],
+            "benefits": "Promotes education and welfare of the girl child; financial support through Sukanya Samriddhi Yojana.",
+            "eligibility": "Girl child from birth up to 10 years for Sukanya Samriddhi account. Open to all Indian citizens.",
+            "application_link": "https://wcd.nic.in/bbbp-schemes"
+        },
+        {
+            "name": "National Scholarship Portal Schemes",
+            "state": "National",
+            "category": [
+                "students"
+            ],
+            "benefits": "Multiple scholarships from \u20b91,000 to \u20b920,000/year for meritorious and economically weak students.",
+            "eligibility": "Students from Class 1 to PhD level; eligibility varies by scheme. Generally requires income below \u20b92.5-8 lakh.",
+            "application_link": "https://scholarships.gov.in/"
+        },
+        {
+            "name": "Mukhyamantri Kisan Kalyan Yojana",
+            "state": "Madhya Pradesh",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Additional \u20b94,000 per year to PM-Kisan beneficiaries (\u20b92,000 in two installments).",
+            "eligibility": "Farmers already registered under PM Kisan in Madhya Pradesh.",
+            "application_link": "https://saara.mp.gov.in/"
+        },
+        {
+            "name": "Ladli Behna Yojana",
+            "state": "Madhya Pradesh",
+            "category": [
+                "women"
+            ],
+            "benefits": "Monthly financial assistance of \u20b91,250 to women, targeting lower and middle income families.",
+            "eligibility": "Women aged 21-60 years; married/widowed/divorced women of Madhya Pradesh; annual family income below \u20b92.5 lakh.",
+            "application_link": "https://cmladlibahna.mp.gov.in/"
+        },
+        {
+            "name": "Mukhyamantri Medhavi Vidyarthi Yojana",
+            "state": "Madhya Pradesh",
+            "category": [
+                "students"
+            ],
+            "benefits": "Full tuition fee payment by state government for admission in government and private colleges.",
+            "eligibility": "Students scoring 70%+ in Class 12 (CBSE/ICSE: 85%+); family income below \u20b96 lakh.",
+            "application_link": "https://medhavikalyan.mp.gov.in/"
+        },
+        {
+            "name": "Amma Vodi",
+            "state": "Andhra Pradesh",
+            "category": [
+                "women",
+                "students"
+            ],
+            "benefits": "Annual financial assistance of \u20b915,000 to mothers for keeping their children in school.",
+            "eligibility": "Mothers below poverty line with children enrolled in government schools (Class 1-12).",
+            "application_link": "https://ammavodi.apcfss.in/"
+        },
+        {
+            "name": "YSR Rythu Bharosa",
+            "state": "Andhra Pradesh",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "\u20b913,500 per year per farmer family as investment support for agricultural input costs.",
+            "eligibility": "All farmer families in Andhra Pradesh including landless tenant farmers.",
+            "application_link": "https://rbk.ap.gov.in/"
+        },
+        {
+            "name": "Jagananna Vidya Kanuka",
+            "state": "Andhra Pradesh",
+            "category": [
+                "students"
+            ],
+            "benefits": "Free school kit including school bag, notebooks, textbooks, shoes, belt, and socks for all students.",
+            "eligibility": "All students studying in government schools from Class 1 to Class 10.",
+            "application_link": "https://apscfdc.ap.gov.in/"
+        },
+        {
+            "name": "Rythu Bandhu",
+            "state": "Telangana",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "\u20b910,000 per acre per season (\u20b920,000/year) as investment support for agricultural activities.",
+            "eligibility": "All landowning farmers in Telangana. Both kharif and rabi seasons covered.",
+            "application_link": "https://rythubandhu.telangana.gov.in/"
+        },
+        {
+            "name": "KCR Kit Scheme",
+            "state": "Telangana",
+            "category": [
+                "women"
+            ],
+            "benefits": "Kit worth \u20b912,000 including baby care items and cash of \u20b913,000 to mothers delivering in government hospitals.",
+            "eligibility": "Pregnant women delivering babies in government hospitals in Telangana.",
+            "application_link": "https://hmfw.telangana.gov.in/"
+        },
+        {
+            "name": "Kalyana Lakshmi / Shaadi Mubarak",
+            "state": "Telangana",
+            "category": [
+                "women"
+            ],
+            "benefits": "Financial assistance of \u20b91,00,116 for marriage of SC/ST girls (Kalyana Lakshmi) and Muslim girls (Shaadi Mubarak).",
+            "eligibility": "Brides aged 18+; family income below \u20b92 lakh; Telangana domicile.",
+            "application_link": "https://telanganaepass.cgg.gov.in/"
+        },
+        {
+            "name": "Mukhyamantri Majhi Ladki Bahin Yojana",
+            "state": "Maharashtra",
+            "category": [
+                "women"
+            ],
+            "benefits": "Monthly financial assistance of \u20b91,500 to women for self-reliance and financial security.",
+            "eligibility": "Women aged 21-65; Maharashtra domicile; annual family income below \u20b92.5 lakh.",
+            "application_link": "https://ladakibahin.maharashtra.gov.in/"
+        },
+        {
+            "name": "Namo Shetkari Mahasanman Nidhi",
+            "state": "Maharashtra",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Additional \u20b96,000/year to farmers on top of PM-Kisan, totalling \u20b912,000/year.",
+            "eligibility": "Farmers registered under PM-Kisan scheme in Maharashtra.",
+            "application_link": "https://krishi.maharashtra.gov.in/"
+        },
+        {
+            "name": "Swadhar Greh Scheme",
+            "state": "Maharashtra",
+            "category": [
+                "women"
+            ],
+            "benefits": "Shelter, food, clothing, and rehabilitation support for women in difficult circumstances.",
+            "eligibility": "Destitute women, survivors of abuse, trafficked women, and women in distress.",
+            "application_link": "https://womenchild.maharashtra.gov.in/"
+        },
+        {
+            "name": "Mukhyamantri Kisan Evam Sarvhit Bima Yojana",
+            "state": "Uttar Pradesh",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Free insurance coverage of \u20b95 lakh for accidents; \u20b92 lakh for partial disability; free treatment up to \u20b92.5 lakh.",
+            "eligibility": "Farmers and landless labourers aged 18-70 in Uttar Pradesh.",
+            "application_link": "https://agriculture.up.gov.in/"
+        },
+        {
+            "name": "Kanya Sumangala Yojana",
+            "state": "Uttar Pradesh",
+            "category": [
+                "women",
+                "students"
+            ],
+            "benefits": "Total financial benefit of \u20b915,000 given in 6 instalments from birth to graduation of girl child.",
+            "eligibility": "Girl child born after 1 April 2019; family income below \u20b93 lakh; UP resident.",
+            "application_link": "https://mksy.up.gov.in/"
+        },
+        {
+            "name": "Free Cycle Yojana",
+            "state": "Uttar Pradesh",
+            "category": [
+                "students"
+            ],
+            "benefits": "Free cycle provided to students of Class 9 to reduce dropout rates due to distance.",
+            "eligibility": "Students enrolled in Class 9 in government secondary schools in Uttar Pradesh.",
+            "application_link": "https://secondary.upeducation.in/"
+        },
+        {
+            "name": "Mukhyamantri Vivah Shagun Yojana",
+            "state": "Haryana",
+            "category": [
+                "women"
+            ],
+            "benefits": "Financial assistance ranging from \u20b911,000 to \u20b971,000 for marriages of girls from SC/BPL/widows.",
+            "eligibility": "Families belonging to SC/BPL/widow categories; bride must be 18+ and groom 21+.",
+            "application_link": "https://haryanascbc.gov.in/"
+        },
+        {
+            "name": "Haryana Kisan Mitra Yojana",
+            "state": "Haryana",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Farmers with up to 2 acres get benefits from multiple welfare schemes; assisted by appointed Kisan Mitras.",
+            "eligibility": "Small and marginal farmers in Haryana owning up to 2 acres.",
+            "application_link": "https://www.haryana.gov.in/government/departments/agriculture"
+        },
+        {
+            "name": "Indira Mahila Shakti Udyam Protsahan Yojana",
+            "state": "Rajasthan",
+            "category": [
+                "women"
+            ],
+            "benefits": "Loans up to \u20b91 crore at subsidised rates for women entrepreneurs to start or expand businesses.",
+            "eligibility": "Women aged 18+ in Rajasthan; preference for SHG members and BPL women.",
+            "application_link": "https://wcd.rajasthan.gov.in/"
+        },
+        {
+            "name": "Rajasthan Kisan Karj Mafi Yojana",
+            "state": "Rajasthan",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Loan waiver up to \u20b92 lakh for small and marginal farmers on short-term crop loans.",
+            "eligibility": "Small and marginal farmers in Rajasthan with crop loans from cooperative banks.",
+            "application_link": "https://lwa.rajasthan.gov.in/"
+        },
+        {
+            "name": "Mukhyamantri Rajshri Yojana",
+            "state": "Rajasthan",
+            "category": [
+                "women",
+                "students"
+            ],
+            "benefits": "Total benefit of \u20b950,000 for girl child given in 6 phases from birth to Class 12 completion.",
+            "eligibility": "Girl child born after 1 June 2016 in Rajasthan; Janani Suraksha Yojana beneficiary.",
+            "application_link": "https://rajshaladarpan.nic.in/"
+        },
+        {
+            "name": "Mukhyamantri Swarojgar Yojana",
+            "state": "Gujarat",
+            "category": [
+                "students"
+            ],
+            "benefits": "Loans up to \u20b91 lakh at 8% interest for youth to start micro enterprises; 20% subsidy for SC/ST/women.",
+            "eligibility": "Educated unemployed youth aged 18-35 in Gujarat; passed at least Class 8.",
+            "application_link": "https://icds.gujarat.gov.in/"
+        },
+        {
+            "name": "Mukhyamantri Amrutum Yojana",
+            "state": "Gujarat",
+            "category": [
+                "farmers",
+                "women"
+            ],
+            "benefits": "Cashless medical treatment up to \u20b95 lakh for critical illnesses at empanelled hospitals.",
+            "eligibility": "BPL families and lower-middle-income families in Gujarat with annual income below \u20b94 lakh.",
+            "application_link": "https://www.maguyojana.gujarat.gov.in/"
+        },
+        {
+            "name": "Noni Suraksha Yojana",
+            "state": "Chhattisgarh",
+            "category": [
+                "women",
+                "students"
+            ],
+            "benefits": "FD of \u20b91 lakh in the name of newborn girl child, maturing when she turns 18.",
+            "eligibility": "BPL families; first two girl children; girl must be born in government hospitals.",
+            "application_link": "https://cgwcd.gov.in/"
+        },
+        {
+            "name": "Rajiv Gandhi Kisan Nyay Yojana",
+            "state": "Chhattisgarh",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Direct cash transfer to farmers for agricultural inputs; up to \u20b99,000 per acre for paddy growers.",
+            "eligibility": "Farmers in Chhattisgarh cultivating paddy, maize, sugarcane, and other notified crops.",
+            "application_link": "https://rgkny.cg.nic.in/"
+        },
+        {
+            "name": "Orunodoi Scheme",
+            "state": "Assam",
+            "category": [
+                "women"
+            ],
+            "benefits": "Monthly financial assistance of \u20b91,250 directly to women bank accounts to meet household needs.",
+            "eligibility": "Women from economically weaker sections in Assam; family income below \u20b92 lakh.",
+            "application_link": "https://orunodoi.assam.gov.in/"
+        },
+        {
+            "name": "Mukhyamantri Krishi Sa-Sajuli Yojana",
+            "state": "Assam",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Free agricultural tool kits worth \u20b95,000 to small and marginal farmers.",
+            "eligibility": "Small and marginal farmers in Assam owning less than 2.5 acres of land.",
+            "application_link": "https://agri-hortiassam.gov.in/"
+        },
+        {
+            "name": "Mukhyamantri Sikho Kamao Yojana",
+            "state": "Madhya Pradesh",
+            "category": [
+                "students"
+            ],
+            "benefits": "Stipend of \u20b98,000-\u20b910,000/month for youth undergoing skill training at registered industries.",
+            "eligibility": "Youth aged 18-29 who are registered on the portal; 12th pass or ITI/diploma/graduate.",
+            "application_link": "https://mmsky.mp.gov.in/"
+        },
+        {
+            "name": "Indira Gandhi Matritva Poshan Yojana",
+            "state": "Rajasthan",
+            "category": [
+                "women"
+            ],
+            "benefits": "\u20b96,000 in 5 installments to pregnant women for improved nutrition and antenatal care.",
+            "eligibility": "Pregnant women expecting second child in tribal districts of Rajasthan.",
+            "application_link": "https://wcd.rajasthan.gov.in/"
+        },
+        {
+            "name": "Jai Bhim Mukhyamantri Pratibha Vikas Yojana",
+            "state": "Delhi",
+            "category": [
+                "students"
+            ],
+            "benefits": "Free coaching for SC/ST/OBC students for competitive exams (UPSC, SSC, Banks); free hostel facility.",
+            "eligibility": "SC/ST/OBC students in Delhi; family income below \u20b96 lakh; passed 10th/12th from Delhi schools.",
+            "application_link": "https://edistrict.delhigovt.nic.in/"
+        },
+        {
+            "name": "Delhi Free Bus Travel for Women",
+            "state": "Delhi",
+            "category": [
+                "women"
+            ],
+            "benefits": "Free travel on all DTC and cluster buses for women passengers.",
+            "eligibility": "All women passengers in Delhi. No income or age restriction.",
+            "application_link": "https://dtc.delhi.gov.in/"
+        },
+        {
+            "name": "Mukhyamantri Tirth Yatra Yojana",
+            "state": "Delhi",
+            "category": [
+                "women",
+                "students"
+            ],
+            "benefits": "Free pilgrimage trips for senior citizens to religious sites across India.",
+            "eligibility": "Delhi residents aged 60+ with valid voter ID; not availed the scheme before.",
+            "application_link": "https://edistrict.delhigovt.nic.in/"
+        },
+        {
+            "name": "Vayoshri Yojana",
+            "state": "Kerala",
+            "category": [
+                "women"
+            ],
+            "benefits": "Monthly pension of \u20b91,600 for destitute elderly citizens.",
+            "eligibility": "Persons aged 60+; annual income below \u20b91 lakh; Kerala resident.",
+            "application_link": "https://welfarepension.lsgkerala.gov.in/"
+        },
+        {
+            "name": "Karshaka Kshemanidhi",
+            "state": "Kerala",
+            "category": [
+                "farmers"
+            ],
+            "benefits": "Pension of \u20b91,500/month for farmers aged 60+; disability and death benefits also covered.",
+            "eligibility": "Farmers aged 18-60 at enrolment; paying into the scheme for minimum 5 years.",
+            "application_link": "https://karshakakshemanidhi.kerala.gov.in/"
+        },
+        {
+            "name": "Ayushman Bharat (PM-JAY)",
+            "state": "National",
+            "category": [
+                "health",
+                "wellness",
+                "medical"
+            ],
+            "benefits": "\u20b95 lakh insurance cover per family per year for secondary and tertiary care hospitalization.",
+            "eligibility": "BPL families, SECC 2011 database beneficiaries. No age or family size limit.",
+            "application_link": "https://dashboard.pmjay.gov.in/"
+        },
+        {
+            "name": "Startup India Seed Fund",
+            "state": "National",
+            "category": [
+                "business",
+                "self-employed",
+                "entrepreneurship"
+            ],
+            "benefits": "Financial assistance up to \u20b950 lakh for startups for proof of concept and market entry.",
+            "eligibility": "Startups recognized by DPIIT, incorporated not more than 2 years ago.",
+            "application_link": "https://www.startupindia.gov.in/"
+        },
+        {
+            "name": "Pradhan Mantri Awas Yojana (PMAY)",
+            "state": "National",
+            "category": [
+                "housing",
+                "local services"
+            ],
+            "benefits": "Subsidy on home loan interest and financial assistance for pucca house construction.",
+            "eligibility": "Economically Weaker Section (EWS) and LIG families in urban and rural areas.",
+            "application_link": "https://pmayg.nic.in/"
+        },
+        {
+            "name": "MGNREGA",
+            "state": "National",
+            "category": [
+                "jobs",
+                "employment"
+            ],
+            "benefits": "Guaranteed 100 days of unskilled manual wage employment every year.",
+            "eligibility": "Adult members of any rural household willing to do manual labor.",
+            "application_link": "https://nrega.nic.in/"
+        },
+        {
+            "name": "Pradhan Mantri Mudra Yojana",
+            "state": "National",
+            "category": [
+                "business",
+                "finance",
+                "money"
+            ],
+            "benefits": "Loans up to \u20b910 lakh for small enterprises (Shishu, Kishore, and Tarun categories).",
+            "eligibility": "Indian citizens with business plans for manufacturing, trading or service sectors.",
+            "application_link": "https://www.mudra.org.in/"
+        },
+        {
+            "name": "Atal Pension Yojana (APY)",
+            "state": "National",
+            "category": [
+                "money",
+                "taxes",
+                "retirement"
+            ],
+            "benefits": "Guaranteed monthly pension of \u20b91,000 to \u20b95,000 after 60 years of age.",
+            "eligibility": "Indian citizens aged 18-40 years holding a savings bank account.",
+            "application_link": "https://npscra.nsdl.co.in/"
+        },
+        {
+            "name": "Digital India BHASHINI",
+            "state": "National",
+            "category": [
+                "science",
+                "it",
+                "communication"
+            ],
+            "benefits": "Real-time AI voice translation for Indian languages to access government services.",
+            "eligibility": "All Indian citizens, developers, and startups.",
+            "application_link": "https://www.bhashini.gov.in/"
+        },
+        {
+            "name": "Agnipath Scheme",
+            "state": "National",
+            "category": [
+                "defence",
+                "foreign affairs",
+                "youth"
+            ],
+            "benefits": "4-year service in Armed Forces with a lumpsum Seva Nidhi package of \u20b911.7 lakh at end.",
+            "eligibility": "Youth aged 17.5 to 21 years meeting physical and educational standards.",
+            "application_link": "https://www.joinindiannavy.gov.in/agniveer"
+        },
+        {
+            "name": "PM Jan Aushadhi Yojana",
+            "state": "National",
+            "category": [
+                "health",
+                "wellness"
+            ],
+            "benefits": "High-quality generic medicines at 50% to 90% lower prices than branded versions.",
+            "eligibility": "Open to all Indian citizens via Jan Aushadhi Kendras.",
+            "application_link": "http://janaushadhi.gov.in/"
+        },
+        {
+            "name": "PM-Kisan Maandhan Yojana",
+            "state": "National",
+            "category": [
+                "farmers",
+                "money"
+            ],
+            "benefits": "Monthly pension of \u20b93,000 for small and marginal farmers after age 60.",
+            "eligibility": "Small/marginal farmers aged 18-40 with landholding up to 2 hectares.",
+            "application_link": "https://pmkmy.gov.in/"
+        },
+        {
+            "name": "Passport Seva Project",
+            "state": "National",
+            "category": [
+                "citizenship",
+                "visa",
+                "travel"
+            ],
+            "benefits": "Fast-track issuance of Indian passports with simplified online application and verification.",
+            "eligibility": "Any Indian citizen residing in India or abroad.",
+            "application_link": "https://www.passportindia.gov.in/"
+        },
+        {
+            "name": "Sukanya Samriddhi Yojana",
+            "state": "National",
+            "category": [
+                "women",
+                "money",
+                "families"
+            ],
+            "benefits": "Highest return savings scheme for girl child with tax benefits and maturity at age 21.",
+            "eligibility": "Parents/guardians of girl child aged below 10 years.",
+            "application_link": "https://www.indiapost.gov.in/"
+        },
+        {
+            "name": "Startup India Standup India",
+            "state": "National",
+            "category": [
+                "business",
+                "self-employed"
+            ],
+            "benefits": "Bank loans between \u20b910 lakh and \u20b91 crore for setting up greenfield enterprises.",
+            "eligibility": "SC/ST and women entrepreneurs starting a new business.",
+            "application_link": "https://www.standupmitra.in/"
+        },
+        {
+            "name": "RTI (Right to Information)",
+            "state": "National",
+            "category": [
+                "governance",
+                "justice"
+            ],
+            "benefits": "Enables citizens to request information from public authorities, promoting transparency.",
+            "eligibility": "Any Indian citizen.",
+            "application_link": "https://rtionline.gov.in/"
+        },
+        {
+            "name": "Skill India (PMKVY)",
+            "state": "National",
+            "category": [
+                "jobs",
+                "youth"
+            ],
+            "benefits": "Free vocational training and skill certification for industry-relevant job roles.",
+            "eligibility": "Unemployed youth or school dropouts holding Aadhaar and bank accounts.",
+            "application_link": "https://www.pmkvyofficial.org/"
+        }
+    ]
+}

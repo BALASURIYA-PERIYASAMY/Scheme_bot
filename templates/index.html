@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SchemeBot — AI India Schemes Assistant</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+
+    <!-- ══════════════════════════════════════════
+       LEFT PANEL — Sidebar
+  ══════════════════════════════════════════ -->
+    <aside class="sidebar" id="sidebar">
+
+        <!-- Brand -->
+        <div class="sidebar-brand">
+            <div class="brand-mark">
+                <span class="brand-flag">🇮🇳</span>
+                <div class="brand-text">
+                    <span class="brand-name">SchemeBot</span>
+                    <!-- <span class="brand-tag">AI-Powered · Groq LLaMA</span> -->
+                </div>
+            </div>
+            <button class="sidebar-x" id="sidebarClose">✕</button>
+        </div>
+
+        <!-- New Chat -->
+        <button class="new-chat-btn" id="newChatBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12h14" />
+            </svg>
+            New Conversation
+        </button>
+
+        <!-- Profile Wizard -->
+        <div class="sidebar-section">
+            <div class="s-label">🎯 Smart Profile Match</div>
+            <div class="profile-form">
+                <select id="pState" class="s-select">
+                    <option value="">Select State / UT…</option>
+                </select>
+                <select id="pType" class="s-select">
+                    <option value="all">All Types (Central & State)</option>
+                    <option value="Central">Central Govt Schemes</option>
+                    <option value="State">State Govt Schemes</option>
+                </select>
+                <select id="pCategory" class="s-select">
+                    <option value="">Your Category…</option>
+                    <option value="Agriculture, Rural &amp; Environment">🌾 Agriculture, Rural &amp; Environment</option>
+                    <option value="Benefits &amp; Social Development">🤝 Benefits &amp; Social Development</option>
+                    <option value="Business &amp; Self-Employed">💼 Business &amp; Self-Employed</option>
+                    <option value="Citizenship, Visa &amp; Passports">🛒 Citizenship, Visa &amp; Passports</option>
+                    <option value="Defence &amp; Foreign Affairs">🫡 Defence &amp; Foreign Affairs</option>
+                    <option value="Driving &amp; Transport">🚘 Driving &amp; Transport</option>
+                    <option value="Education &amp; Learning">🎓 Education &amp; Learning</option>
+                    <option value="Governance &amp; Planning">🏛️ Governance &amp; Planning</option>
+                    <option value="Health &amp; Wellness">🏥 Health &amp; Wellness</option>
+                    <option value="Housing &amp; Local Services">🏠 Housing &amp; Local Services</option>
+                    <option value="Infrastructure &amp; Industries">🏭 Infrastructure &amp; Industries</option>
+                    <option value="Jobs">📊 Jobs &amp; Employment</option>
+                    <option value="Justice, Law &amp; Grievances">⚖️ Justice, Law &amp; Grievances</option>
+                    <option value="Money &amp; Taxes">💰 Money &amp; Taxes</option>
+                    <option value="Science, IT &amp; Communication">💻 Science, IT &amp; Communication</option>
+                    <option value="Travel &amp; Tourism">✈️ Travel &amp; Tourism</option>
+                    <option value="Welfare of Families">👨‍👩‍👧‍👦 Welfare of Families</option>
+                    <option value="Youth, Sports &amp; Culture">🏅 Youth, Sports &amp; Culture</option>
+                </select>
+                <input id="pIncome" type="text" class="s-input" placeholder="Annual income (e.g. 200000)" />
+                <button id="matchBtn" class="match-btn">Find Matching Schemes →</button>
+            </div>
+        </div>
+
+        <!-- Recent Chats -->
+        <div class="sidebar-section">
+            <div class="s-label-row">
+                <span class="s-label">💬 Recent Chats</span>
+                <button class="clear-btn" id="clearChatsBtn" title="Clear history">Clear</button>
+            </div>
+            <div class="recent-list" id="recentList">
+                <div class="no-recents" id="noRecents">No recent chats yet</div>
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="sidebar-footer">
+            <div class="ai-badge" id="aiBadge">
+                <span class="ai-dot"></span>
+                <span id="aiStatus">Checking AI status…</span>
+            </div>
+            <div class="footer-note">Data from official govt portals. Always verify before applying.</div>
+        </div>
+
+    </aside>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ══════════════════════════════════════════
+       MAIN AREA
+  ══════════════════════════════════════════ -->
+    <main class="main">
+
+        <!-- Topbar -->
+        <header class="topbar">
+            <button class="topbar-menu" id="menuBtn">☰</button>
+            <div class="topbar-center">
+                <span class="topbar-flag">🇮🇳</span>
+                <span class="topbar-title">India Government Schemes</span>
+                <span class="topbar-ai">✦ AI</span>
+            </div>
+            <div class="topbar-right">
+                <div class="context-pill" id="contextPill" style="display:none">
+                    <span id="contextLabel">—</span>
+                </div>
+                <!-- Language Picker -->
+                <div class="lang-picker-wrap" id="langPickerWrap">
+                    <button class="lang-trigger" id="langTrigger" title="Choose response language">
+                        <span id="langFlag">🌐</span>
+                        <span id="langLabel">EN</span>
+                        <svg viewBox="0 0 10 6" width="10" height="6" fill="currentColor">
+                            <path d="M0 0l5 6 5-6z" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <div class="lang-search-wrap"><input id="langSearch" class="lang-search"
+                                placeholder="Search language…" autocomplete="off" /></div>
+                        <div class="lang-list" id="langList"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chat Window -->
+        <div class="chat-window" id="chatWindow">
+
+            <!-- Splash screen -->
+            <div class="splash" id="splash">
+                <div class="splash-glyph">🇮🇳</div>
+                <h1 class="splash-title">SchemeBot</h1>
+                <p class="splash-sub">Your AI guide to Indian government schemes, yojanas, and welfare programmes</p>
+
+                <div class="cat-grid">
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Agriculture, Rural &amp; Environment', 'Agriculture, Rural and Environment schemes')">
+                        <div class="cat-icon">🌾</div>
+                        <div class="cat-title">Agriculture, Rural &amp; Environment</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Benefits &amp; Social Development', 'Benefits and Social Development schemes')">
+                        <div class="cat-icon">🤝</div>
+                        <div class="cat-title">Benefits &amp; Social Development</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Business &amp; Self-Employed', 'Business and Self-Employed schemes')">
+                        <div class="cat-icon">💼</div>
+                        <div class="cat-title">Business &amp; Self-Employed</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Citizenship, Visa &amp; Passports', 'Citizenship Visa and Passport schemes')">
+                        <div class="cat-icon">🛒</div>
+                        <div class="cat-title">Citizenship, Visa &amp; Passports</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Defence &amp; Foreign Affairs', 'Defence and Foreign Affairs schemes')">
+                        <div class="cat-icon">🫑</div>
+                        <div class="cat-title">Defence &amp; Foreign Affairs</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Driving &amp; Transport', 'Driving and Transport schemes')">
+                        <div class="cat-icon">🚘</div>
+                        <div class="cat-title">Driving &amp; Transport</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Education &amp; Learning', 'Education and Learning schemes scholarships')">
+                        <div class="cat-icon">🎓</div>
+                        <div class="cat-title">Education &amp; Learning</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Governance &amp; Planning', 'Governance and Planning schemes')">
+                        <div class="cat-icon">🏛️</div>
+                        <div class="cat-title">Governance &amp; Planning</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Health &amp; Wellness', 'Health and Wellness schemes')">
+                        <div class="cat-icon">🏥</div>
+                        <div class="cat-title">Health &amp; Wellness</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Housing &amp; Local Services', 'Housing and Local Services schemes')">
+                        <div class="cat-icon">🏠</div>
+                        <div class="cat-title">Housing &amp; Local Services</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Infrastructure &amp; Industries', 'Infrastructure and Industries schemes')">
+                        <div class="cat-icon">🏭</div>
+                        <div class="cat-title">Infrastructure &amp; Industries</div>
+                    </div>
+                    <div class="cat-card" onclick="openCategoryPanel('Jobs', 'Jobs and Employment schemes')">
+                        <div class="cat-icon">📊</div>
+                        <div class="cat-title">Jobs</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Justice, Law &amp; Grievances', 'Justice Law and Grievances schemes')">
+                        <div class="cat-icon">⚖️</div>
+                        <div class="cat-title">Justice, Law &amp; Grievances</div>
+                    </div>
+                    <div class="cat-card" onclick="openCategoryPanel('Money &amp; Taxes', 'Money and Taxes schemes')">
+                        <div class="cat-icon">💰</div>
+                        <div class="cat-title">Money &amp; Taxes</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Science, IT &amp; Communication', 'Science IT and Communication schemes')">
+                        <div class="cat-icon">💻</div>
+                        <div class="cat-title">Science, IT &amp; Communication</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Travel &amp; Tourism', 'Travel and Tourism schemes')">
+                        <div class="cat-icon">✈️</div>
+                        <div class="cat-title">Travel &amp; Tourism</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Welfare of Families', 'Welfare of Families schemes')">
+                        <div class="cat-icon">👨‍👩‍👧‍👦</div>
+                        <div class="cat-title">Welfare of Families</div>
+                    </div>
+                    <div class="cat-card"
+                        onclick="openCategoryPanel('Youth, Sports &amp; Culture', 'Youth Sports and Culture schemes')">
+                        <div class="cat-icon">🏅</div>
+                        <div class="cat-title">Youth, Sports &amp; Culture</div>
+                    </div>
+                </div>
+
+                <p class="splash-hint" id="splashHint">Ask in any language · Voice input supported 🎙 · <span
+                        id="activeLangHint">Currently: English</span></p>
+            </div>
+
+        </div>
+
+        <!-- Typing indicator (outside chat window for z-index) -->
+        <div class="typing-bar" id="typingBar" style="display:none">
+            <div class="typing-avatar">🇮🇳</div>
+            <div class="typing-content">
+                <span class="typing-label">SchemeBot is thinking</span>
+                <div class="typing-dots"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-zone">
+            <div class="input-row">
+                <!-- Voice Button -->
+                <button class="voice-btn" id="voiceBtn" title="Voice input">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                        <line x1="12" y1="19" x2="12" y2="23" />
+                        <line x1="8" y1="23" x2="16" y2="23" />
+                    </svg>
+                </button>
+
+                <div class="textarea-wrap" id="textareaWrap">
+                    <textarea id="userInput" placeholder="Ask about any government scheme, state, or eligibility…"
+                        rows="1"></textarea>
+                </div>
+
+                <button class="send-btn" id="sendBtn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span id="voiceStatus" class="voice-hint"></span>
+                <span class="input-note">SchemeBot can make mistakes. Verify important details on official
+                    portals.</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ══ Category Schemes Panel ══ -->
+    <div class="cat-panel-overlay" id="catPanelOverlay"></div>
+    <div class="cat-panel" id="catPanel">
+        <div class="cat-panel-header">
+            <div class="cat-panel-title">
+                <span class="cat-panel-icon" id="catPanelIcon">🌾</span>
+                <div>
+                    <div class="cat-panel-name" id="catPanelName">Category</div>
+                    <div class="cat-panel-count" id="catPanelCount">Loading schemes...</div>
+                </div>
+            </div>
+            <div class="cat-panel-actions">
+                <input type="text" class="cat-filter" id="catFilter" placeholder="Filter schemes..." />
+                <div class="cat-type-tabs">
+                    <button class="type-tab active" data-filter="all" onclick="filterSchemes('all', this)">All</button>
+                    <button class="type-tab" data-filter="Central"
+                        onclick="filterSchemes('Central', this)">Central</button>
+                    <button class="type-tab" data-filter="State" onclick="filterSchemes('State', this)">State</button>
+                </div>
+                <button class="cat-panel-close" id="catPanelClose" title="Close">✕</button>
+            </div>
+        </div>
+        <div class="cat-panel-body" id="catPanelBody">
+            <div class="cat-panel-loading" id="catPanelLoading">
+                <div class="panel-spinner"></div>
+                <p>Loading schemes…</p>
+                <p class="panel-loading-sub">Searching database</p>
+            </div>
+            <div class="scheme-cards" id="schemeCards"></div>
+            <div class="cat-panel-empty" id="catPanelEmpty" style="display:none">
+                No schemes found matching your filter.
+            </div>
+            <div class="cat-panel-error" id="catPanelError" style="display:none"></div>
+        </div>
+        <div class="cat-panel-footer">
+            <span id="catFooterText">Click any scheme to view details</span>
+        </div>
+    </div>
+
+    <!-- Apply Popup Modal -->
+    <div class="apply-overlay" id="applyOverlay"></div>
+    <div class="apply-modal" id="applyModal" role="dialog" aria-modal="true">
+        <div class="apply-modal-header">
+            <div class="apply-modal-title-wrap">
+                <span class="apply-modal-badge" id="applyBadge">Central</span>
+                <h2 class="apply-modal-name" id="applyName">Scheme Name</h2>
+            </div>
+            <button class="apply-modal-close" id="applyModalClose" title="Close">✕</button>
+        </div>
+        <div class="apply-modal-body">
+            <div class="apply-detail-row" id="applyStateRow">
+                <span class="apply-detail-label">📍 State / Scope</span>
+                <span class="apply-detail-val" id="applyState"></span>
+            </div>
+            <div class="apply-detail-row" id="applyCatRow">
+                <span class="apply-detail-label">🏷 Category</span>
+                <span class="apply-detail-val" id="applyCat"></span>
+            </div>
+            <div class="apply-detail-row" id="applyMinRow">
+                <span class="apply-detail-label">🏛 Ministry</span>
+                <span class="apply-detail-val" id="applyMin"></span>
+            </div>
+            <div class="apply-detail-block" id="applyBenRow">
+                <span class="apply-detail-label">⭐ Benefits</span>
+                <p class="apply-detail-text" id="applyBen"></p>
+            </div>
+            <div class="apply-detail-block" id="applyEligRow">
+                <span class="apply-detail-label">👤 Eligibility</span>
+                <p class="apply-detail-text" id="applyElig"></p>
+            </div>
+        </div>
+        <div class="apply-modal-footer">
+            <button class="apply-cancel-btn" id="applyCancelBtn">Close</button>
+            <a class="apply-now-btn" id="applyLink" href="#" target="_blank" rel="noopener">
+                Apply Now ↗
+            </a>
+        </div>
+    </div>
+
+    <!-- Eligibility Checker Modal -->
+    <div class="elig-overlay" id="eligOverlay"></div>
+    <div class="elig-modal" id="eligModal">
+        <div class="elig-header">
+            <div class="elig-title">🔍 Eligibility Checker</div>
+            <button class="elig-close" id="eligClose">✕</button>
+        </div>
+        <div class="elig-body">
+            <div class="elig-name-box">
+                <div class="elig-label">Scheme Name</div>
+                <h3 class="apply-modal-name" id="eligSchemeName">Scheme Name</h3>
+            </div>
+            
+            <div class="elig-criteria-box">
+                <div class="elig-label">Scheme Criteria</div>
+                <p class="elig-text" id="eligCriteriaText">Loading criteria...</p>
+            </div>
+
+            <div id="eligFormArea">
+                <div class="elig-label">Verify Your Profile</div>
+                <div id="eligDynamicForm">
+                    <!-- Custom fields generated by AI load here -->
+                </div>
+                
+                <div class="elig-manual-fallback" style="margin-top: 15px; display: none;" id="eligManualArea">
+                    <div class="elig-label">Additional Details</div>
+                    <textarea class="elig-textarea" id="eligUserText" placeholder="Tell us more about your situation..."></textarea>
+                </div>
+                
+                <button class="elig-verify-btn" id="eligVerifyBtn" style="margin-top: 20px; width: 100%;">Verify My Eligibility</button>
+            </div>
+
+            <div class="elig-result" id="eligResult">
+                <div class="result-status" id="eligStatus">
+                    <span>Checking...</span>
+                </div>
+                <div class="result-reasoning" id="eligReasoning">
+                    Analyzing your details against scheme rules...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+
+</html>
