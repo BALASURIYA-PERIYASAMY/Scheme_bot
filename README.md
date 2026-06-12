@@ -1,6 +1,6 @@
-# 🇮🇳 SchemeBot — AI-Powered India Government Schemes Chatbot
+# SchemaBot — AI-Powered India Government Schemes Chatbot
 
-A full-stack chatbot powered by **Anthropic Claude AI** + **Flask** that gives smart, conversational answers about Indian government schemes using a verified JSON knowledge base.
+View : [schemebot-production.up.railway.app/](https://schemebot-production.up.railway.app/)
 
 ---
 
