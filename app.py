@@ -184,7 +184,7 @@ def call_ai(system_prompt, conversation_history, max_tokens=1200):
     Call the Groq API.
     Returns the assistant's text response as a string.
     """
-    api_key = os.environ.get("GROQ_API_KEY", "YOUR_API_KEY")
+    api_key = os.environ.get("GROQ_API_KEY", "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")
 
     messages = [{"role": "system", "content": system_prompt}] + conversation_history
 
